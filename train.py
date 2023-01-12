@@ -35,7 +35,7 @@ parser.add_argument('--predictor', type=str, default='2-linear',
                     help='decoder method')
 parser.add_argument('--lr', type=float, default=0.005,
                     help='Initial learning rate.')
-parser.add_argument('--dim_embs', type=int, default=16,
+parser.add_argument('--dim_embs', type=int, default=32,
                     help='initial embedding size of node')
 parser.add_argument('--epochs', type=int, default=300,
                     help='initial embedding size of node')
