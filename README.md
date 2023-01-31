@@ -27,4 +27,18 @@ The number of train epochs for review is 300, as it is a small datsets. But for 
 python train.py --dataset=review-1 --epochs=300
 ```
 
+#### General flags
 
+```{txt}
+optional arguments:
+  --dataset                       dataset                               
+  --seed                          Random seed (default:2023)
+  --mask_ratio                    random mask ratio  
+  --predictor                     decoder method
+  --lr                            learning rate
+  --dim_embs                      node embedding size
+  --epoch                         training epochs
+  --alpha                         control the contribution of Perspective-specific and Cross-perspective loss
+  --beta                          control the contribution of loss contrastive
+  --batch_size                    batch size
+```
