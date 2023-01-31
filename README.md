@@ -7,11 +7,24 @@ links that exist in the graph. As a result, these methods are incapable of captu
 between nodes of the same type. SGGCL augments a signed bipartite graph with a novel two-level graph augmentation method. At the top level, we maintain two perspectives of the signed bipartite graph, one presents the original interactions between nodes of different types, and the other presents the implicit relations between nodes of the same type. At the bottom level, we employ stochastic perturbation strategies to create two perturbed graphs in each perspective. Then, we construct positive and negative samples from the perturbed graphs and design a multi-perspective contrastive loss to unify the node presentations learned from the two perspectives. Experimental results on real-world datasets demonstrate the effectiveness of the proposed model over state-of-the-art methods
 
 
-Implementation of "Contrastive Learning for Signed Bipartite Graphs", Sigir2023
-
-We have four datasets, review, Bonanza, ML-1M, AmazonBook. The number of train epochs for review is 300, as it is a small datsets. But for other three datsets, the number of training epochs is 2000.
-
 ![image](Images/illustration.png " The overall architecture of SBGCL")
-## Experiments Setting
+## Datasets
+
+We have four datasets, i.e., review, Bonanza, ML-1M, AmazonBook. we randomly select 10% of the links as test set, 5% for validation set, and the remaining 85% as training set for each of our datasets. You can download it in ```datasets``` foalder.
+
+## Dependency
+In order to run this code, you need to install following dependencies:
+
+```
+pip install torch numpy sklearn torch_geometric
+```
+
+## Run Example
+
+The number of train epochs for review is 300, as it is a small datsets. But for other three datsets, the number of training epochs is 2000.
+
+```bash
+python train.py --dataset=review-1 --epochs=300
+```
 
 
